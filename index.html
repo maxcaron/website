@@ -1,24 +1,37 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Maxime Caron</title>
-    <meta name="author" content="Maxime Caron" />
-    <meta name="description" content="Maxime Caron's Personal Website" />
-    <meta name="keywords" content="resume, personal, blog, website, cv" />
-    <link rel="shortcut icon" href="code.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="./static/css/index.css" />
-  </head>
-  <body>
-    <div class="main">
-      <div class="header">
-        <div class="dir">~/maximecaron</div>
-        <div class="right-arrow"></div>
-        <div class="branch">dev</div>
-        <div class="right-arrow-branch"></div>
-        <div class="blink">|</div>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <title>Maxime Caron</title>
+  <meta name="author" content="Maxime Caron" />
+  <meta name="description" content="Maxime Caron's Personal Website" />
+  <meta name="keywords" content="resume, personal, blog, website, cv" />
+  <link rel="shortcut icon" href="code.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="./static/css/index.css" />
+</head>
+
+<body>
+  <div class="main">
+    <div class="header">
+      <div class="dir">~/maximecaron</div>
+      <div class="right-arrow"></div>
+      <div class="branch">dev</div>
+      <div class="right-arrow-branch"></div>
+      <div>ls</div>
+      <!-- <div class="blink">|</div> -->
     </div>
-  </body>
+    <div class="ls">
+      <div id='about' class="ls-result" onclick="activateSection('about')">about</div>
+      <div id='resume' class="ls-result" onclick="activateSection('resume')">resume</div>
+      <div id='contact' class="ls-result" onclick="activateSection('contact')">contact</div>
+    </div>
+    <span id="body" markdown="1"></span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+
 </html>
