@@ -1,15 +1,10 @@
 ---
-export interface Props {
-	title: string;
-	body: string;
-	href: string;
-}
+import Sections from './Sections.vue';
 
-const sections = ['about', 'resume', 'contact']
 ---
 
 <div class="w-full h-full bg-slate-600">
-	{sections}
+	<Sections client:load/>
 </div>
 <style>
 	
